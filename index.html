@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №4</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Сторінка відгуків</h1>
+        <button onclick="toggleTheme()">Змінити тему</button>
+    </header>
+
+    <main>
+        <h2>Відгуки роботодавців</h2>
+        <div id="comments-container">Завантаження коментарів...</div>
+    </main>
+
+    <div id="modal-overlay"></div>
+    <div id="modal">
+        <h3>Зворотній зв'язок</h3>
+        <form action="https://formspree.io/f/xzdyjqak" method="POST">
+            <input type="text" name="name" placeholder="Ім'я" required><br><br>
+            <input type="email" name="email" placeholder="Email" required><br><br>
+            <input type="tel" name="phone" placeholder="Номер телефону"><br><br>
+            <textarea name="message" placeholder="Ваше повідомлення" rows="4"></textarea><br><br>
+            <button type="submit">Відправити</button>
+            <button type="button" onclick="closeModal()">Закрити</button>
+        </form>
+    </div>
+
+    <footer id="my-footer">
+        <p><strong>Інформація про систему:</strong></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
